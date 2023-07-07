@@ -7,13 +7,17 @@ function App() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   dispatch(fetchUsers())
+  // }, [dispatch])
+
+  const hendleClick = () => {
     dispatch(fetchUsers())
-  }, [dispatch])
+  }
 
   return (
     <div className="App">
-      initial
+      <button onClick={() => hendleClick()}>Click</button>
     </div>
   );
 }
