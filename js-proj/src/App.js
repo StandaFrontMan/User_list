@@ -5,6 +5,7 @@ import { fetchUsers } from './store/usersSlice';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import MainPage from './pages/MainPage';
+import SingleUser from './components/SingleUser';
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<MainPage hendleClick={hendleClick}/>}/>
+
+          <Route path='user/:id' element={<SingleUser />}/>
         </Route>
       </Routes>
     </>
